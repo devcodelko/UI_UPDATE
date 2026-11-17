@@ -1,0 +1,649 @@
+/* ==========================================================================
+   AdminPro - DataTables Custom Enhancements
+   ========================================================================== */
+
+.table-responsive {
+  border-radius: var(--radius-lg);
+  margin-bottom: 0.5rem;
+}
+
+table.dataTable {
+  width: 100% !important;
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
+  border-collapse: separate !important;
+  border-spacing: 0;
+  border-color: var(--border-color) !important;
+}
+
+table.dataTable thead th {
+  background-color: #f8fafc !important;
+  color: #475569 !important;
+  font-weight: 600 !important;
+  font-size: 0.725rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  padding: 0.75rem 1rem !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  border-top: none !important;
+  white-space: nowrap;
+}
+
+[data-bs-theme="dark"] table.dataTable thead th {
+  background-color: #111827 !important;
+  color: #94a3b8 !important;
+  border-bottom-color: #1e293b !important;
+}
+
+table.dataTable tbody td {
+  padding: 0.8rem 1rem !important;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--border-color) !important;
+  font-size: 0.845rem !important;
+  color: var(--text-body) !important;
+  letter-spacing: -0.008em;
+  background-color: var(--card-bg);
+}
+
+table.dataTable tbody tr:hover td {
+  background-color: rgba(22, 150, 143, 0.03) !important;
+}
+
+[data-bs-theme="dark"] table.dataTable tbody tr:hover td {
+  background-color: rgba(22, 150, 143, 0.1) !important;
+}
+
+/* Dark Mode High-Contrast Table Typography */
+[data-bs-theme="dark"] table.dataTable tbody td {
+  background-color: var(--card-bg) !important;
+  color: #cbd5e1 !important;
+  border-bottom-color: #1e293b !important;
+}
+
+[data-bs-theme="dark"] table.dataTable tbody td .text-dark,
+[data-bs-theme="dark"] table.dataTable tbody td [class*="text-dark"],
+[data-bs-theme="dark"] table.dataTable tbody td .fw-bold,
+[data-bs-theme="dark"] table.dataTable tbody td .fw-semibold {
+  color: #f8fafc !important;
+}
+
+[data-bs-theme="dark"] table.dataTable tbody td .text-muted,
+[data-bs-theme="dark"] table.dataTable tbody td small {
+  color: #94a3b8 !important;
+}
+
+/* Checkbox styling in tables */
+table.dataTable th input[type="checkbox"],
+table.dataTable td input[type="checkbox"] {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+/* DataTables Controls Header */
+.dt-controls-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dataTables_wrapper .dataTables_length {
+  display: inline-flex;
+  align-items: center;
+}
+
+.dataTables_wrapper .dataTables_length select {
+  height: 36px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  padding: 0.35rem 2rem 0.35rem 0.75rem;
+  font-size: 0.84rem;
+  font-weight: 500;
+  letter-spacing: -0.006em;
+  background-color: var(--card-bg);
+  color: var(--text-body);
+  box-shadow: var(--shadow-xs);
+  cursor: pointer;
+  outline: none;
+}
+
+.dataTables_wrapper .dataTables_length select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(22, 150, 143, 0.15);
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  height: 36px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  padding: 0.35rem 0.85rem;
+  font-size: 0.84rem;
+  letter-spacing: -0.006em;
+  margin-left: 0.5rem;
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  outline: none;
+  box-shadow: var(--shadow-xs);
+}
+
+.dataTables_wrapper .dataTables_filter input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(22, 150, 143, 0.15);
+}
+
+/* Export Buttons Styling - Clean, high contrast & modern */
+.dt-buttons,
+.dataTables_wrapper .dt-buttons {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  margin-bottom: 0 !important;
+}
+
+.dt-buttons.btn-group>.btn {
+  border-radius: var(--radius-md) !important;
+}
+
+.dataTables_wrapper .dt-buttons .btn,
+.dataTables_wrapper .dt-buttons .btn-secondary,
+.dt-buttons .btn,
+.dt-buttons .btn-secondary,
+.dt-export-btn {
+  height: 36px !important;
+  background-image: none !important;
+  background-color: #f8fafc !important;
+  color: var(--text-body) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-md) !important;
+  font-size: 0.84rem !important;
+  font-weight: 500 !important;
+  padding: 0.35rem 0.85rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.45rem !important;
+  box-shadow: var(--shadow-xs) !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease-in-out !important;
+
+}
+
+/* Excel Export Button: Soft Pastel Light Green Background */
+.dataTables_wrapper .dt-buttons .buttons-excel,
+.dt-buttons .buttons-excel,
+.btn-export-excel {
+  background-image: none !important;
+  background-color: #ecfdf5 !important;
+  border: 1px solid #a7f3d0 !important;
+  color: #065f46 !important;
+}
+
+.dataTables_wrapper .dt-buttons .buttons-excel:hover,
+.dt-buttons .buttons-excel:hover,
+.btn-export-excel:hover {
+  background-image: none !important;
+  background-color: #d1fae5 !important;
+  border-color: #6ee7b7 !important;
+  color: #047857 !important;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.2) !important;
+  transform: translateY(-1px);
+}
+
+/* CSV Export Button: Soft Pastel Light Blue Background */
+.dataTables_wrapper .dt-buttons .buttons-csv,
+.dt-buttons .buttons-csv,
+.btn-export-csv {
+  background-image: none !important;
+  background-color: #eff6ff !important;
+  border: 1px solid #bfdbfe !important;
+  color: #1e40af !important;
+}
+
+.dataTables_wrapper .dt-buttons .buttons-csv:hover,
+.dt-buttons .buttons-csv:hover,
+.btn-export-csv:hover {
+  background-image: none !important;
+  background-color: #dbeafe !important;
+  border-color: #93c5fd !important;
+  color: #1d4ed8 !important;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2) !important;
+  transform: translateY(-1px);
+}
+
+.dataTables_wrapper .dt-buttons .btn:active,
+.dt-buttons .btn:active {
+  transform: translateY(0);
+}
+
+/* Dark mode theme overrides for buttons & length menu */
+[data-bs-theme="dark"] .dataTables_wrapper .dt-buttons .buttons-excel,
+[data-bs-theme="dark"] .dt-buttons .buttons-excel,
+[data-bs-theme="dark"] .btn-export-excel {
+  background-color: rgba(16, 185, 129, 0.14) !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
+  color: #6ee7b7 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-bs-theme="dark"] .dataTables_wrapper .dt-buttons .buttons-excel:hover,
+[data-bs-theme="dark"] .dt-buttons .buttons-excel:hover,
+[data-bs-theme="dark"] .btn-export-excel:hover {
+  background-color: rgba(16, 185, 129, 0.25) !important;
+  border-color: #34d399 !important;
+  color: #a7f3d0 !important;
+}
+
+[data-bs-theme="dark"] .dataTables_wrapper .dt-buttons .buttons-csv,
+[data-bs-theme="dark"] .dt-buttons .buttons-csv,
+[data-bs-theme="dark"] .btn-export-csv {
+  background-color: rgba(59, 130, 246, 0.14) !important;
+  border-color: rgba(59, 130, 246, 0.35) !important;
+  color: #93c5fd !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-bs-theme="dark"] .dataTables_wrapper .dt-buttons .buttons-csv:hover,
+[data-bs-theme="dark"] .dt-buttons .buttons-csv:hover,
+[data-bs-theme="dark"] .btn-export-csv:hover {
+  background-color: rgba(59, 130, 246, 0.25) !important;
+  border-color: #60a5fa !important;
+  color: #bfdbfe !important;
+}
+
+/* ==========================================================================
+   Modern DataTables & Universal Pagination System
+   ========================================================================== */
+
+.dataTables_wrapper .dataTables_paginate {
+  padding-top: 1.15rem !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .pagination,
+.pagination {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.375rem !important; /* 6px decoupled spacing */
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+/* Base Page Item Link (Perfect Proportional Squircle) */
+.dataTables_wrapper .dataTables_paginate .page-item .page-link,
+.pagination .page-item .page-link {
+  min-width: 36px !important;
+  height: 36px !important;
+  padding: 0 0.5rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: var(--radius-md) !important;
+  border: 1px solid var(--border-color) !important;
+  background-color: var(--card-bg) !important;
+  color: var(--text-body) !important;
+  font-size: 0.845rem !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04) !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  user-select: none !important;
+  cursor: pointer !important;
+}
+
+/* Arrow Icon Alignment */
+.dataTables_wrapper .dataTables_paginate .page-item .page-link i,
+.pagination .page-item .page-link i {
+  font-size: 0.85rem !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Hover State for Clickable / Enabled Pages */
+.dataTables_wrapper .dataTables_paginate .page-item:not(.active):not(.disabled) .page-link:hover,
+.pagination .page-item:not(.active):not(.disabled) .page-link:hover {
+  background-color: var(--primary-light) !important;
+  border-color: var(--primary) !important;
+  color: var(--primary) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 6px rgba(22, 150, 143, 0.18) !important;
+}
+
+/* Active Page State - UPICON Brand Gradient with Soft Elevation */
+.dataTables_wrapper .dataTables_paginate .page-item.active .page-link,
+.pagination .page-item.active .page-link {
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover)) !important;
+  border-color: var(--primary) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  box-shadow: 0 3px 8px rgba(22, 150, 143, 0.35) !important;
+  cursor: default !important;
+  z-index: 2 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .page-item.active .page-link:hover,
+.pagination .page-item.active .page-link:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(22, 150, 143, 0.45) !important;
+}
+
+/* Disabled State (Inactive Prev / Next when on bounds) */
+.dataTables_wrapper .dataTables_paginate .page-item.disabled .page-link,
+.pagination .page-item.disabled .page-link {
+  background-color: var(--body-bg) !important;
+  border-color: var(--border-light) !important;
+  color: var(--text-subtle) !important;
+  opacity: 0.45 !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  transform: none !important;
+}
+
+/* Focus Ring */
+.dataTables_wrapper .dataTables_paginate .page-item .page-link:focus,
+.pagination .page-item .page-link:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(22, 150, 143, 0.2) !important;
+}
+
+/* Dark Mode Overrides for Pagination */
+[data-bs-theme="dark"] .dataTables_wrapper .dataTables_paginate .page-item .page-link,
+[data-bs-theme="dark"] .pagination .page-item .page-link {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-body) !important;
+}
+
+[data-bs-theme="dark"] .dataTables_wrapper .dataTables_paginate .page-item:not(.active):not(.disabled) .page-link:hover,
+[data-bs-theme="dark"] .pagination .page-item:not(.active):not(.disabled) .page-link:hover {
+  background-color: rgba(22, 150, 143, 0.18) !important;
+  border-color: var(--primary) !important;
+  color: #2dd4bf !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-bs-theme="dark"] .dataTables_wrapper .dataTables_paginate .page-item.disabled .page-link,
+[data-bs-theme="dark"] .pagination .page-item.disabled .page-link {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+  border-color: #1e293b !important;
+  color: #475569 !important;
+  opacity: 0.35 !important;
+}
+
+/* DataTables Info Text Polish */
+.dataTables_wrapper .dataTables_info {
+  font-size: 0.845rem !important;
+  color: var(--text-muted) !important;
+  font-weight: 500 !important;
+  padding-top: 1.15rem !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Action Dropdown Menu & Buttons in Table */
+.table-action-btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: var(--radius-sm);
+}
+
+.table-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.table-image-thumb {
+  width: 50px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+/* Table Row Action Buttons (Pastel Rounded Squircles) */
+.table td .btn-group {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 0.45rem !important;
+  box-shadow: none !important;
+}
+
+.table td .btn-group>.btn,
+.table td .btn-group>a,
+.table td .btn-group>button,
+.table td a.btn,
+.table td button.btn {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 8px !important;
+  border: none !important;
+  font-size: 0.92rem !important;
+  margin-left: 0 !important;
+  flex: none !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.table td .btn-outline-primary,
+.table td a[title*="Edit"] {
+  background-color: #e0f2fe !important;
+  color: #0284c7 !important;
+}
+
+.table td .btn-outline-primary:hover,
+.table td a[title*="Edit"]:hover {
+  background-color: #bae6fd !important;
+  color: #0369a1 !important;
+  transform: translateY(-1px);
+}
+
+.table td .btn-outline-danger,
+.table td button[title*="Delete"],
+.table td .btn-delete-record,
+.table td .btn-delete-user,
+.table td .btn-delete-news,
+.table td .btn-delete-submission {
+  background-color: #fee2e2 !important;
+  color: #ef4444 !important;
+}
+
+.table td .btn-outline-danger:hover,
+.table td button[title*="Delete"]:hover,
+.table td .btn-delete-record:hover,
+.table td .btn-delete-user:hover,
+.table td .btn-delete-news:hover,
+.table td .btn-delete-submission:hover {
+  background-color: #fecaca !important;
+  color: #dc2626 !important;
+  transform: translateY(-1px);
+}
+
+.table td a[title*="View"],
+.table td a[title*="Preview"],
+.table td a[title*="Profile"],
+.table td .btn-view-submission {
+  background-color: #e6f6f5 !important;
+  color: #16968f !important;
+}
+
+.table td a[title*="View"]:hover,
+.table td a[title*="Preview"]:hover,
+.table td a[title*="Profile"]:hover,
+.table td .btn-view-submission:hover {
+  background-color: #d1f0ed !important;
+  color: #127f79 !important;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   DataTables Responsive Toggle Arrow & Child Rows (Clean Arrow Only)
+   ========================================================================== */
+
+/* 1. Ensure control cell has clean padding so text/checkbox never overlaps the arrow */
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control,
+table.dataTable.dtr-column > tbody > tr > td.dtr-control,
+table.dataTable.dtr-column > tbody > tr > th.dtr-control {
+  position: relative !important;
+  padding-left: 2.25rem !important;
+  cursor: pointer !important;
+}
+
+/* 2. Clean, high-visibility arrow only (No background, No shadow, No border) - Closed State */
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control::before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control::before,
+table.dataTable.dtr-column > tbody > tr > td.dtr-control::before,
+table.dataTable.dtr-column > tbody > tr > th.dtr-control::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 0.65rem !important;
+  transform: translateY(-50%) !important;
+  width: 18px !important;
+  height: 18px !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2316968f' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 16px 16px !important;
+  transition: transform 0.2s ease, opacity 0.2s ease !important;
+  z-index: 2 !important;
+  display: block !important;
+  margin: 0 !important;
+}
+
+/* 3. Hover state for toggle arrow */
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:hover::before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:hover::before {
+  transform: translateY(-50%) scale(1.2) !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* 4. Expanded / Open State (Arrow pointing down - No background, No shadow, No border) */
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td.dtr-control::before,
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th.dtr-control::before,
+table.dataTable.dtr-inline.collapsed > tbody > tr.dtr-expanded > td.dtr-control::before,
+table.dataTable.dtr-inline.collapsed > tbody > tr.dtr-expanded > th.dtr-control::before,
+table.dataTable.dtr-column > tbody > tr.parent > td.dtr-control::before,
+table.dataTable.dtr-column > tbody > tr.parent > th.dtr-control::before {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e07a1e' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-size: 16px 16px !important;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td.dtr-control:hover::before,
+table.dataTable.dtr-inline.collapsed > tbody > tr.dtr-expanded > td.dtr-control:hover::before {
+  transform: translateY(-50%) scale(1.2) !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* 5. Dark Mode High-Contrast Arrow (Crisp Indigo Arrow, No background, No shadow) */
+[data-bs-theme="dark"] table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control::before,
+[data-bs-theme="dark"] table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control::before,
+[data-bs-theme="dark"] table.dataTable.dtr-column > tbody > tr > td.dtr-control::before,
+[data-bs-theme="dark"] table.dataTable.dtr-column > tbody > tr > th.dtr-control::before {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23818cf8' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+}
+
+[data-bs-theme="dark"] table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td.dtr-control::before,
+[data-bs-theme="dark"] table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th.dtr-control::before,
+[data-bs-theme="dark"] table.dataTable.dtr-inline.collapsed > tbody > tr.dtr-expanded > td.dtr-control::before,
+[data-bs-theme="dark"] table.dataTable.dtr-inline.collapsed > tbody > tr.dtr-expanded > th.dtr-control::before {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23818cf8' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+}
+
+/* 6. Child Row Details Formatting */
+table.dataTable > tbody > tr.child {
+  background-color: #f8fafc !important;
+}
+
+table.dataTable > tbody > tr.child:hover td {
+  background-color: #f1f5f9 !important;
+}
+
+table.dataTable > tbody > tr.child ul.dtr-details {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.5rem !important;
+  padding: 0.85rem 1.25rem !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+
+table.dataTable > tbody > tr.child ul.dtr-details li {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0.45rem 0 !important;
+  border-bottom: 1px dashed var(--border-color) !important;
+  font-size: 0.85rem !important;
+}
+
+table.dataTable > tbody > tr.child ul.dtr-details li:last-child {
+  border-bottom: none !important;
+}
+
+table.dataTable > tbody > tr.child span.dtr-title {
+  font-weight: 600 !important;
+  color: var(--text-main) !important;
+  min-width: 140px !important;
+  display: inline-block !important;
+}
+
+table.dataTable > tbody > tr.child span.dtr-data {
+  color: var(--text-body) !important;
+}
+
+[data-bs-theme="dark"] table.dataTable > tbody > tr.child {
+  background-color: #162032 !important;
+}
+
+[data-bs-theme="dark"] table.dataTable > tbody > tr.child:hover td {
+  background-color: #1a273e !important;
+}
+
+[data-bs-theme="dark"] table.dataTable > tbody > tr.child ul.dtr-details li {
+  border-bottom-color: #1e293b !important;
+}
+
+[data-bs-theme="dark"] table.dataTable > tbody > tr.child span.dtr-title {
+  color: #f8fafc !important;
+}
+
+[data-bs-theme="dark"] table.dataTable > tbody > tr.child span.dtr-data {
+  color: #cbd5e1 !important;
+}
+
+
+
+

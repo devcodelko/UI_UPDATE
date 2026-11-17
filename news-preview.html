@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Preview - News Management - UPICON</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+    <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- Core App Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <div id="app-wrapper">
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="sidebar-brand">
+          <img src="assets/images/upicon-logo.png" alt="UPICON" class="sidebar-brand-logo">
+          <img src="assets/images/upicon-crest.png" alt="UPICON" class="sidebar-brand-icon">
+        </a>
+        <button class="sidebar-close-btn d-lg-none" aria-label="Close Sidebar" title="Close Sidebar">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <div class="sidebar-menu">
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item"><a class="nav-link" href="dashboard.html"><i class="bi bi-grid-fill menu-icon"></i><span class="menu-title">Dashboard</span></a></li>
+        </ul>
+
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#submenu-data" role="button" aria-expanded="false">
+              <i class="bi bi-database-fill menu-icon"></i><span class="menu-title">Data Management</span><i class="bi bi-chevron-right menu-arrow"></i>
+            </a>
+            <div class="collapse" id="submenu-data">
+              <ul class="submenu">
+                <li><a class="nav-link" href="data-list.html">All Records</a></li>
+                <li><a class="nav-link" href="data-form.html">Add New Record</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#submenu-users" role="button" aria-expanded="false">
+              <i class="bi bi-people-fill menu-icon"></i><span class="menu-title">User Management</span><i class="bi bi-chevron-right menu-arrow"></i>
+            </a>
+            <div class="collapse" id="submenu-users">
+              <ul class="submenu">
+                <li><a class="nav-link" href="user-list.html">User Listing</a></li>
+                <li><a class="nav-link" href="user-form.html">Add User</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="collapse" href="#submenu-news" role="button" aria-expanded="true">
+              <i class="bi bi-newspaper menu-icon"></i><span class="menu-title">News Management</span><i class="bi bi-chevron-right menu-arrow"></i>
+            </a>
+            <div class="collapse show" id="submenu-news">
+              <ul class="submenu">
+                <li><a class="nav-link active" href="news-list.html">News Listing</a></li>
+                <li><a class="nav-link" href="news-form.html">Add News</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#submenu-pages" role="button" aria-expanded="false">
+              <i class="bi bi-layout-text-window-reverse menu-icon"></i><span class="menu-title">Pages CMS</span><i class="bi bi-chevron-right menu-arrow"></i>
+            </a>
+            <div class="collapse" id="submenu-pages">
+              <ul class="submenu">
+                <li><a class="nav-link" href="about-us.html">About Us</a></li>
+                <li><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                <li><a class="nav-link" href="contact-submissions.html">Submissions</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="nav flex-column mb-3">
+          <li class="nav-item"><a class="nav-link" href="user-profile.html"><i class="bi bi-person-badge menu-icon"></i><span class="menu-title">My Profile</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="change-password.html"><i class="bi bi-key-fill menu-icon"></i><span class="menu-title">Change Password</span></a></li>
+        </ul>
+      </div>
+          <!-- Bottom Pinned Logout -->
+      <div class="sidebar-footer">
+        <a class="nav-link btn-logout-trigger text-danger" href="#">
+          <i class="bi bi-box-arrow-right menu-icon text-danger"></i>
+          <span class="menu-title">Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop"></div>
+
+    <div id="main-wrapper">
+      <header id="topbar">
+        <div class="topbar-left">
+          <button class="sidebar-toggle-btn" aria-label="Toggle Navigation" title="Toggle Sidebar">
+            <span class="toggle-icon-bars">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </span>
+          </button>
+          <div class="topbar-search">
+            <i class="bi bi-search search-icon"></i>
+            <input type="text" class="form-control" placeholder="Search news...">
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="topbar-btn theme-toggle-btn" title="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+
+          
+          <!-- Notifications Dropdown -->
+          <div class="dropdown">
+            <button class="topbar-btn" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="bi bi-bell"></i>
+              <span class="badge-dot"></span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end shadow-lg p-0" style="width: 320px; border-radius: 0.75rem;">
+              <div class="p-3 border-bottom d-flex align-items-center justify-content-between">
+                <span class="fw-bold">Notifications</span>
+                <span class="badge badge-subtle-primary">3 New</span>
+              </div>
+              <div class="list-group list-group-flush small" style="max-height: 280px; overflow-y: auto;">
+                <a href="data-list.html" class="list-group-item list-group-item-action py-3">
+                  <div class="d-flex align-items-start gap-2">
+                    <span class="badge bg-primary rounded-circle p-2 mt-1"><i class="bi bi-file-earmark-plus text-white"></i></span>
+                    <div>
+                      <div class="fw-semibold text-dark">New Record Added</div>
+                      <p class="text-muted mb-0 small">Enterprise ERP Suite Migration was logged.</p>
+                      <span class="text-muted" style="font-size: 0.7rem;">10 mins ago</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="contact-submissions.html" class="list-group-item list-group-item-action py-3">
+                  <div class="d-flex align-items-start gap-2">
+                    <span class="badge bg-success rounded-circle p-2 mt-1"><i class="bi bi-envelope text-white"></i></span>
+                    <div>
+                      <div class="fw-semibold text-dark">New Contact Inquiry</div>
+                      <p class="text-muted mb-0 small">Inquiry from Jonathan Myers regarding Enterprise plan.</p>
+                      <span class="text-muted" style="font-size: 0.7rem;">1 hour ago</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="user-list.html" class="list-group-item list-group-item-action py-3">
+                  <div class="d-flex align-items-start gap-2">
+                    <span class="badge bg-info rounded-circle p-2 mt-1"><i class="bi bi-person-check text-white"></i></span>
+                    <div>
+                      <div class="fw-semibold text-dark">User Account Verified</div>
+                      <p class="text-muted mb-0 small">Sophia Reynolds completed onboarding.</p>
+                      <span class="text-muted" style="font-size: 0.7rem;">2 hours ago</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="p-2 border-top text-center">
+                <a href="contact-submissions.html" class="small fw-semibold text-decoration-none">View All Submissions</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button class="user-dropdown-btn" data-bs-toggle="dropdown">
+              <img src="assets/images/avatar-alexander.jpg" class="user-avatar header-user-avatar" alt="Avatar">
+              <div class="user-info">
+                <div class="user-name header-user-name">Alexander Mitchell</div>
+                <div class="user-role header-user-role">Super Admin</div>
+              </div>
+              <i class="bi bi-chevron-down text-muted small ms-1"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-lg py-2">
+              <li><a class="dropdown-item py-2" href="user-profile.html"><i class="bi bi-person me-2 text-primary"></i> My Profile</a></li>
+              <li><a class="dropdown-item py-2" href="change-password.html"><i class="bi bi-key me-2 text-warning"></i> Change Password</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item py-2 text-danger btn-logout-trigger" href="#"><i class="bi bi-box-arrow-right me-2"></i> Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Article Preview -->
+      <main id="content">
+        <div class="page-header">
+          <div>
+            <h2 class="page-title">Article Preview</h2>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="news-list.html">News</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Reader View</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="header-actions d-flex gap-2">
+            <a id="preview-news-edit-btn" href="news-form.html" class="btn btn-primary">
+              <i class="bi bi-pencil me-1"></i> Edit Article
+            </a>
+            <a href="news-list.html" class="btn btn-outline-secondary">
+              <i class="bi bi-arrow-left me-1"></i> Back to News
+            </a>
+          </div>
+        </div>
+
+        <div id="news-preview-container" class="row justify-content-center">
+          <div class="col-12 col-xl-10">
+            <article class="card overflow-hidden">
+              <img id="preview-news-image" src="assets/images/news-cybersecurity-lg.jpg" class="img-fluid" alt="Article Cover" style="max-height: 420px; width: 100%; object-fit: cover;">
+              
+              <div class="card-body p-4 p-md-5">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span id="preview-news-category" class="badge badge-subtle-primary">Technology</span>
+                  <span id="preview-news-status" class="badge badge-subtle-success">Published</span>
+                </div>
+
+                <h1 id="preview-news-title" class="fw-bold text-dark display-6 mb-3">UPICON 4.0 Released with Next-Gen Enterprise Features</h1>
+
+                <div class="d-flex align-items-center gap-3 text-muted pb-4 mb-4 border-bottom">
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-person-circle fs-5 text-primary"></i>
+                    <span id="preview-news-author" class="fw-medium text-dark">Elena Rostova</span>
+                  </div>
+                  <span>&bull;</span>
+                  <div>
+                    <i class="bi bi-calendar3 me-1"></i>
+                    <span id="preview-news-date">March 28, 2026</span>
+                  </div>
+                </div>
+
+                <p id="preview-news-short-desc" class="lead text-muted mb-4 fst-italic">
+                  We are thrilled to unveil UPICON 4.0, featuring responsive high-performance dashboards, pure static HTML architecture, native dark mode, and seamless analytics.
+                </p>
+
+                <!-- Formatted HTML Body -->
+                <div id="preview-news-content" class="article-body text-dark">
+                  <p class="lead">UPICON 4.0 marks a significant milestone in our commitment to delivering the fastest, most scalable, and cleanest dashboard interface for modern enterprise teams.</p>
+                  
+                  <h4 class="mt-4 mb-3">Key Highlights of Version 4.0</h4>
+                  <ul>
+                    <li><strong>Pure Static Architecture:</strong> Lightning-fast page loads without heavy framework overhead or server lock-in.</li>
+                    <li><strong>Refined Dark Theme:</strong> High contrast, eye-comfort color palettes meeting WCAG AAA accessibility standards.</li>
+                    <li><strong>Modular DataTables Integration:</strong> Client-side sorting, searching, pagination, and multi-format reporting out-of-the-box.</li>
+                    <li><strong>Standardized Component Hierarchy:</strong> Unified headers, navigation drawers, and footer bars across all 15 system views.</li>
+                  </ul>
+
+                  <h4 class="mt-4 mb-3">Streamlined Data Operations</h4>
+                  <p>With our client-side CSV and Excel data handlers powered by SheetJS and Papa Parse, administrative teams can ingest, preview, and process massive datasets with immediate visual feedback.</p>
+
+                  <p class="mt-4">Thank you to our global developer and operations community for their continued feedback and dedication in making UPICON the premier web dashboard toolkit.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </main>
+      <!-- Footer -->
+      <footer id="footer">
+        <div>
+          &copy; 2026 <strong>UPICON</strong> (U.P. Industrial Consultants Ltd.). All rights reserved.
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <a href="about-us.html" class="text-muted text-decoration-none">About</a>
+          <a href="contact-us.html" class="text-muted text-decoration-none">Support</a>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+      <!-- Vendors & Core Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Core App Scripts -->
+  <script src="assets/js/notifications.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/sidebar.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  <!-- Application Module -->
+  <script src="assets/js/news-management.js"></script>
+</body>
+</html>
+

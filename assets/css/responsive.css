@@ -1,0 +1,167 @@
+/* ==========================================================================
+   AdminPro - Responsive Stylesheet
+   ========================================================================== */
+
+/* Large screens and Desktops (min-width: 992px) */
+@media (min-width: 992px) {
+  .sidebar-backdrop {
+    display: none !important;
+  }
+}
+
+/* Tablet & Mobile Screens (max-width: 991.98px) */
+@media (max-width: 991.98px) {
+  #sidebar {
+    transform: translateX(-100%);
+    box-shadow: var(--shadow-lg);
+  }
+
+  body.sidebar-open #sidebar {
+    transform: translateX(0);
+  }
+
+  #main-wrapper {
+    margin-left: 0 !important;
+    width: 100%;
+  }
+
+  .sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 1030;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-speed) ease;
+  }
+
+  body.sidebar-open .sidebar-backdrop {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .topbar-search {
+    display: none;
+  }
+}
+
+/* Mobile Screens (max-width: 767.98px) */
+@media (max-width: 767.98px) {
+  #content {
+    padding: 1rem;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .page-header .header-actions {
+    width: 100%;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .page-header .header-actions .btn,
+  .page-header .header-actions a.btn,
+  .page-header .header-actions button.btn {
+    flex: 1 1 auto;
+    white-space: nowrap !important;
+    min-height: 38px;
+    padding: 0.45rem 0.85rem;
+    font-size: 0.825rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .page-header .header-actions .input-icon-group {
+    width: 100% !important;
+  }
+
+  .stat-card .card-body {
+    padding: 1rem;
+  }
+
+  .stat-value {
+    font-size: 1.4rem;
+  }
+
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+
+  #topbar {
+    padding: 0 1rem;
+  }
+
+  .user-info {
+    display: none;
+  }
+
+  .dataTables_wrapper .dataTables_length,
+  .dataTables_wrapper .dataTables_filter {
+    text-align: left !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .dt-buttons {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .dt-buttons .btn {
+    flex: 1 1 auto;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .profile-avatar-wrapper {
+    text-align: center;
+  }
+
+  .profile-avatar-lg {
+    margin: 0 auto;
+  }
+
+  .profile-header-info {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+}
+
+/* Small Mobile Screens (max-width: 575.98px) */
+@media (max-width: 575.98px) {
+  .page-header .header-actions .btn-primary {
+    order: -1;
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .page-header .header-actions .btn:not(.btn-primary) {
+    flex: 1 1 auto;
+  }
+
+  .auth-card {
+    padding: 1.5rem 1.25rem;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+}
