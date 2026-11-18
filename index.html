@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Happy Diwali | UPICON - शुभ दीपावली भव्य उत्सव ✨</title>
+
+    <!-- Meta tags for rich preview -->
+    <meta name="description"
+        content="UPICON wishes you a very Happy Diwali! Experience the grand fireworks, glowing diyas, festive music and interactive celebrations.">
+    <meta name="theme-color" content="#120524">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Poppins:wght@300;400;600;700;800&family=Rozha+One&family=Yatra+One&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Instant Flying Text Intro & Automatic Fullscreen Trigger -->
+    <script>
+        (function() {
+            function activateFlight() {
+                if (document.body) {
+                    document.body.classList.add('fly-active');
+                }
+            }
+            function triggerAutoFullscreen() {
+                if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+                    var el = document.documentElement;
+                    var fn = el.requestFullscreen || el.webkitRequestFullscreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+                    if (fn) {
+                        try {
+                            var p = fn.call(el);
+                            if (p && p.catch) p.catch(function() {});
+                        } catch (e) {}
+                    }
+                }
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function() {
+                    activateFlight();
+                    triggerAutoFullscreen();
+                });
+            } else {
+                activateFlight();
+                triggerAutoFullscreen();
+            }
+
+            window.addEventListener('load', triggerAutoFullscreen);
+            ['click', 'pointerdown', 'touchstart', 'keydown'].forEach(function(evt) {
+                window.addEventListener(evt, triggerAutoFullscreen, { once: true, passive: true });
+            });
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Ambient Space Background & Nebulae -->
+    <div class="space-background">
+        <div class="nebula-glow nebula-1"></div>
+        <div class="nebula-glow nebula-2"></div>
+        <!-- Ayodhya Ram Mandir Subtle Vector Skyline Backdrop ("Halka Halka Visible") -->
+        <div class="ayodhya-skyline-backdrop" aria-hidden="true">
+            <img src="ayodhya-skyline.svg" alt="Ayodhya Ram Mandir Skyline" class="ayodhya-skyline-img">
+        </div>
+    </div>
+
+    <!-- Fireworks & Sparklers Canvas -->
+    <canvas id="fireworksCanvas"></canvas>
+
+    <!-- Top Traditional Toran (Marigold Garland) -->
+    <div class="festive-toran"></div>
+
+    <!-- Hanging Lanterns (Akash Kandils) Left & Right -->
+    <div class="lantern-wrapper lantern-left">
+        <svg class="kandil-svg" width="90" height="230" viewBox="0 0 100 240">
+            <!-- String -->
+            <line x1="50" y1="0" x2="50" y2="40" stroke="#ffd700" stroke-width="2" />
+            <!-- Top Cap -->
+            <polygon points="35,40 65,40 50,55" fill="#ff5500" />
+            <!-- Diamond Lantern Core -->
+            <polygon points="50,55 90,95 50,135 10,95" fill="url(#kandilGrad1)" stroke="#ffd700" stroke-width="2.5" />
+            <!-- Inner Glowing Lantern Core -->
+            <circle cx="50" cy="95" r="20" fill="#fffb8f" opacity="0.8" filter="blur(2px)" />
+            <!-- Hanging Ribbons / Tassels -->
+            <path d="M25,135 Q20,180 30,220" stroke="#ff0055" stroke-width="3" fill="none" />
+            <path d="M38,135 Q40,185 35,230" stroke="#ffd700" stroke-width="3" fill="none" />
+            <path d="M50,135 Q50,185 50,235" stroke="#ff9900" stroke-width="3.5" fill="none" />
+            <path d="M62,135 Q60,185 65,230" stroke="#ffd700" stroke-width="3" fill="none" />
+            <path d="M75,135 Q80,180 70,220" stroke="#ff0055" stroke-width="3" fill="none" />
+            <defs>
+                <linearGradient id="kandilGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ff007f" />
+                    <stop offset="50%" stop-color="#ff7700" />
+                    <stop offset="100%" stop-color="#ffd700" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+    <div class="lantern-wrapper lantern-right">
+        <svg class="kandil-svg" width="90" height="230" viewBox="0 0 100 240">
+            <!-- String -->
+            <line x1="50" y1="0" x2="50" y2="40" stroke="#ffd700" stroke-width="2" />
+            <!-- Top Cap -->
+            <polygon points="35,40 65,40 50,55" fill="#ff5500" />
+            <!-- Diamond Lantern Core -->
+            <polygon points="50,55 90,95 50,135 10,95" fill="url(#kandilGrad2)" stroke="#ffd700" stroke-width="2.5" />
+            <!-- Inner Glowing Lantern Core -->
+            <circle cx="50" cy="95" r="20" fill="#fffb8f" opacity="0.8" filter="blur(2px)" />
+            <!-- Hanging Ribbons / Tassels -->
+            <path d="M25,135 Q20,180 30,220" stroke="#00e5ff" stroke-width="3" fill="none" />
+            <path d="M38,135 Q40,185 35,230" stroke="#ffd700" stroke-width="3" fill="none" />
+            <path d="M50,135 Q50,185 50,235" stroke="#ff007f" stroke-width="3.5" fill="none" />
+            <path d="M62,135 Q60,185 65,230" stroke="#ffd700" stroke-width="3" fill="none" />
+            <path d="M75,135 Q80,180 70,220" stroke="#00e5ff" stroke-width="3" fill="none" />
+            <defs>
+                <linearGradient id="kandilGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#9d00ff" />
+                    <stop offset="50%" stop-color="#ff0055" />
+                    <stop offset="100%" stop-color="#ffd700" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="navbar-spacer"></div>
+
+        <div class="nav-actions">
+            <!-- Fullscreen Toggle Button -->
+            <button id="fullscreenToggleBtn" class="btn-icon btn-icon-round" title="फुल स्क्रीन मोड (Toggle Fullscreen)">
+                <i class="fa-solid fa-expand" id="fullscreenIcon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Hero Section -->
+    <main>
+        <section class="hero-section">
+            <!-- Rotating Rangoli Mandala in Center -->
+            <svg class="rangoli-bg" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#ffd700" stroke-width="1.5"
+                    stroke-dasharray="6,4" />
+                <circle cx="100" cy="100" r="70" fill="none" stroke="#ff5500" stroke-width="2" />
+                <circle cx="100" cy="100" r="45" fill="none" stroke="#ff007f" stroke-width="1" stroke-dasharray="3,3" />
+                <!-- 8-petal Lotus Geometry -->
+                <path d="M100,10 Q115,50 100,70 Q85,50 100,10 Z" fill="rgba(255,215,0,0.3)" stroke="#ffd700" />
+                <path d="M100,190 Q115,150 100,130 Q85,150 100,190 Z" fill="rgba(255,215,0,0.3)" stroke="#ffd700" />
+                <path d="M10,100 Q50,115 70,100 Q50,85 10,100 Z" fill="rgba(255,215,0,0.3)" stroke="#ffd700" />
+                <path d="M190,100 Q150,115 130,100 Q150,85 190,100 Z" fill="rgba(255,215,0,0.3)" stroke="#ffd700" />
+                <path d="M36,36 Q70,60 78,78 Q60,70 36,36 Z" fill="rgba(255,85,0,0.3)" stroke="#ff8800" />
+                <path d="M164,164 Q130,140 122,122 Q140,130 164,164 Z" fill="rgba(255,85,0,0.3)" stroke="#ff8800" />
+                <path d="M164,36 Q140,70 122,78 Q130,60 164,36 Z" fill="rgba(255,85,0,0.3)" stroke="#ff8800" />
+                <path d="M36,164 Q60,130 78,122 Q70,140 36,164 Z" fill="rgba(255,85,0,0.3)" stroke="#ff8800" />
+                <circle cx="100" cy="100" r="15" fill="#ffd700" />
+            </svg>
+
+            <!-- Centered Transparent UPICON Logo (Directly above auspicious tag) -->
+            <div class="hero-logo-container fly-intro-top">
+                <img src="upicon-logo.png" alt="UPICON Logo" class="hero-centered-logo">
+            </div>
+
+            <!-- Festive Auspicious Tag -->
+            <div class="festive-greeting-tag fly-intro-right">
+                <i class="fa-solid fa-sparkles"></i>
+                <span>✦ ॐ महालक्ष्म्यै नमः ✦ दीपोत्सव ✦</span>
+                <i class="fa-solid fa-sparkles"></i>
+            </div>
+
+            <!-- Grand Explosive Title with Scatter-Assemble Flying Letters -->
+            <div class="main-title-container">
+                <span class="title-sparkle sparkle-left" aria-hidden="true">✦</span>
+                <h1 class="main-title" aria-label="HAPPY DIWALI" title="Happy Diwali - क्लिक करके अतिरिक्त आतिशबाजी शुरू करें!">
+                    <span class="fly-word word-happy">
+                        <span class="fly-char c-1">H</span><span class="fly-char c-2">A</span><span class="fly-char c-3">P</span><span class="fly-char c-4">P</span><span class="fly-char c-5">Y</span>
+                    </span>
+                    <span class="fly-space">&nbsp;</span>
+                    <span class="fly-word word-diwali">
+                        <span class="fly-char c-6">D</span><span class="fly-char c-7">I</span><span class="fly-char c-8">W</span><span class="fly-char c-9">A</span><span class="fly-char c-10">L</span><span class="fly-char c-11">I</span>
+                    </span>
+                </h1>
+                <span class="title-sparkle sparkle-right" aria-hidden="true">✦</span>
+            </div>
+
+            <div class="hindi-subtext fly-intro-left">
+                ✨ शुभ दीपावली — दीपों का पावन महापर्व ✨
+            </div>
+
+            <!-- UPICON Company Goodwill Greeting Banner (English quote removed) -->
+            <div class="company-wishes-banner fly-intro-bottom">
+                <strong>UPICON</strong> परिवार की ओर से आप सभी को प्रकाश, समृद्धि और खुशियों के महापर्व दीपावली की हार्दिक शुभकामनाएं!
+            </div>
+
+            <!-- Hero Centerpiece: Grand Animated Diya (Clickable) -->
+            <div class="hero-diya-stage" id="mainHeroDiya" title="दीपक पर क्लिक करें और आशीर्वाद पाएं!">
+                <svg class="grand-diya-svg" viewBox="0 0 200 160">
+                    <defs>
+                        <!-- Clay Diya Gradient -->
+                        <linearGradient id="clayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ff8c00" />
+                            <stop offset="45%" stop-color="#b83b00" />
+                            <stop offset="100%" stop-color="#691a00" />
+                        </linearGradient>
+
+                        <!-- Golden Rim Gradient -->
+                        <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#ffd700" />
+                            <stop offset="50%" stop-color="#fff8db" />
+                            <stop offset="100%" stop-color="#ffaa00" />
+                        </linearGradient>
+
+                        <!-- Flame Gradient -->
+                        <linearGradient id="flameGrad" x1="50%" y1="100%" x2="50%" y2="0%">
+                            <stop offset="0%" stop-color="#ff1a1a" />
+                            <stop offset="25%" stop-color="#ff6600" />
+                            <stop offset="65%" stop-color="#ffd700" />
+                            <stop offset="90%" stop-color="#ffffff" />
+                        </linearGradient>
+
+                        <!-- Outer Aura Radial Glow -->
+                        <radialGradient id="auraGrad" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="rgba(255, 230, 100, 0.9)" />
+                            <stop offset="40%" stop-color="rgba(255, 120, 0, 0.5)" />
+                            <stop offset="100%" stop-color="rgba(255, 60, 0, 0)" />
+                        </radialGradient>
+                    </defs>
+
+                    <!-- Pulsing Flame Aura -->
+                    <circle class="flame-glow-circle" cx="100" cy="55" r="42" fill="url(#auraGrad)" />
+
+                    <!-- Flickering Flame Core -->
+                    <g class="flame-core">
+                        <!-- Outer Flame -->
+                        <path
+                            d="M100,10 C118,35 125,55 122,75 C118,92 105,98 100,98 C95,98 82,92 78,75 C75,55 82,35 100,10 Z"
+                            fill="url(#flameGrad)" filter="drop-shadow(0 0 14px #ff8800)" />
+                        <!-- Inner White Flame Core -->
+                        <path
+                            d="M100,32 C108,48 112,62 110,75 C108,84 103,88 100,88 C97,88 92,84 90,75 C88,62 92,48 100,32 Z"
+                            fill="#ffffff" opacity="0.9" />
+                    </g>
+
+                    <!-- Diya Base (Traditional Clay Lamp) -->
+                    <!-- Shadow Base -->
+                    <ellipse cx="100" cy="148" rx="75" ry="10" fill="rgba(0, 0, 0, 0.5)" filter="blur(4px)" />
+
+                    <!-- Clay Body -->
+                    <path d="M20,95 Q100,155 180,95 C175,135 140,150 100,150 C60,150 25,135 20,95 Z"
+                        fill="url(#clayGrad)" stroke="#4a1000" stroke-width="2" />
+
+                    <!-- Decorative Golden Rim -->
+                    <ellipse cx="100" cy="95" rx="80" ry="18" fill="url(#clayGrad)" stroke="url(#rimGrad)"
+                        stroke-width="4" />
+
+                    <!-- Inner Oil Basin -->
+                    <ellipse cx="100" cy="95" rx="65" ry="12" fill="#521300" />
+                    <ellipse cx="100" cy="95" rx="55" ry="8" fill="#ffd700" opacity="0.25" />
+
+                    <!-- Decorative Motifs on Diya Body -->
+                    <circle cx="65" cy="120" r="4" fill="#ffd700" />
+                    <circle cx="82" cy="128" r="4" fill="#ffd700" />
+                    <circle cx="100" cy="132" r="5" fill="#ffffff" stroke="#ffd700" stroke-width="1.5" />
+                    <circle cx="118" cy="128" r="4" fill="#ffd700" />
+                    <circle cx="135" cy="120" r="4" fill="#ffd700" />
+                </svg>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Walking Procession of Lord Shri Ram, Mata Sita & Lakshman (Left to Right) -->
+    <div class="ram-walking-procession-track" aria-hidden="true">
+        <div class="ram-walking-group">
+            <div class="walking-ground-aura"></div>
+            <div class="ram-walking-viewport">
+                <img src="ram-walk-clean-cycle.png" alt="Lord Shri Ram, Mata Sita, and Lakshman Walking" class="ram-walking-sprite-film">
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen Bottom Festive Diya Dock (Single Screen No-Scroll) -->
+    <div class="bottom-diya-dock">
+        <div class="diya-dock-strip" id="diyaStrip">
+            <!-- 9 glowing animated diyas generated dynamically by script.js -->
+        </div>
+        <div class="dock-footer-text">
+            ✦ <strong>UPICON</strong> Wishes You & Your Family A Very Happy Diwali ✦
+        </div>
+    </div>
+
+    <!-- Scripts: jQuery, Canvas Confetti, Audio Engine, Fireworks Engine, Main App Script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="audio.js"></script>
+    <script src="fireworks.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
